@@ -1,3 +1,4 @@
+import { useState } from "react"
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
@@ -5,6 +6,7 @@ import { ContactFormData } from "@/interfaces/formData.interface";
 import { sendContactForm } from "@/lib/api";
 
 const ContactForm = ({ handleFormChange }: any) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const initialValues = {
     firstname: "",
     lastname: "",
@@ -24,6 +26,7 @@ const ContactForm = ({ handleFormChange }: any) => {
   });
 
   const handleSubmit = async (values: ContactFormData) => {
+    setIsSubmitting(true);
     await sendContactForm(values);
     handleFormChange()
   };
@@ -128,11 +131,12 @@ const ContactForm = ({ handleFormChange }: any) => {
           </div>
         </div>
         <div className="mt-10">
-          <button
+        <button
             type="submit"
+            disabled={isSubmitting}
             className="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
           >
-            Contactanos
+            {isSubmitting ? "Enviando..." : "Contactanos"}
           </button>
         </div>
       </Form>
