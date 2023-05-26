@@ -50,7 +50,7 @@ const Home = () => {
             fill="url(#83fd4e5a-9d52-42fc-97b6-718e5d7ee527)"
           />
         </svg>
-        <div className="mx-auto max-w-7xl px-6 py-10 lg:flex lg:items-center lg:gap-x-10 lg:px-8">
+        <div className="mx-auto max-w-7xl px-6 py-28 lg:py-10 lg:flex lg:items-center lg:gap-x-10 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto">
             <motion.h1
               initial={{ opacity: 0, y: 10 }}
