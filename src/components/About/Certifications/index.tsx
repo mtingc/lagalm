@@ -13,7 +13,7 @@ const Certifications = () => {
   const items = [
     <h2
       id="sale-heading"
-      className="text-2xl font-bold tracking-tight text-blue-500 sm:text-3xl lg:text-4xl"
+      className="text-2xl font-bold tracking-tight text-cyan-600 sm:text-3xl lg:text-4xl"
     >
       Nuestro compromiso con la excelencia en la fabricación
     </h2>,

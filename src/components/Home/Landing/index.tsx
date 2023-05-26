@@ -4,7 +4,7 @@ import AnimatedList from "@/components/Animated/List";
 
 const Landing = () => {
   const items = [
-    <h1 className="max-w-lg text-3xl font-bold tracking-tight text-blue-500 sm:text-5xl">
+    <h1 className="max-w-lg text-3xl font-bold tracking-tight text-cyan-600 sm:text-5xl">
       Expertos en manufactura de productos plásticos y metálicos
     </h1>,
     <p className="mt-6 text-lg leading-7 text-gray-600">
@@ -18,7 +18,7 @@ const Landing = () => {
     <div className="mt-10 flex items-center gap-x-6">
       <Link
         href="/about"
-        className="text-sm font-semibold leading-6 text-blue-500"
+        className="text-sm font-semibold leading-6 text-cyan-600"
       >
         Leer más <span aria-hidden="true">→</span>
       </Link>

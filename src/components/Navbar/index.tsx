@@ -5,7 +5,7 @@ import Link from "next/link";
 import Logo from "@/components/Logo";
 
 const navLinks = [
-  { name: "Incio", href: "/", active: true },
+  { name: "Inicio", href: "/", active: true },
   { name: "Nosotros", href: "/about", active: false },
   { name: "Contacto", href: "/contact", active: false },
 ];
@@ -34,7 +34,7 @@ const Navbar = () => {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 ${
-        isScrolled ? "bg-white shadow-sm" : "bg-transparent"
+        isScrolled ? "bg-slate-100 shadow-md" : "bg-transparent"
       } transition-colors duration-500`}
     >
       <nav
@@ -75,8 +75,8 @@ const Navbar = () => {
             <Link
               key={href}
               href={href}
-              className={`text-sm font-semibold leading-6 text-gray-900 ${
-                active ? "" : ""
+              className={`text-sm font-semibold tracking-widest transition-all duration-300 ${
+                active ? "text-gray-700 hover:text-gray-500" : "text-gray-500 hover:text-gray-700"
               }`}
             >
               {name}
@@ -131,14 +131,6 @@ const Navbar = () => {
                       {name}
                     </Link>
                   ))}
-                </div>
-                <div className="py-6">
-                  <a
-                    href="#"
-                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                  >
-                    Log in
-                  </a>
                 </div>
               </div>
             </div>

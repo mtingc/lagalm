@@ -14,7 +14,7 @@ const WeProvide = () => {
   };
 
   const items = [
-    <h2 className="text-base font-semibold leading-7 text-blue-500">
+    <h2 className="text-base font-semibold leading-7 text-cyan-600">
       Brindamos soluciones integrales a nuestros clientes
     </h2>,
     <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">

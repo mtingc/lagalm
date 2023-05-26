@@ -51,7 +51,7 @@ const Footer = () => {
     },
   ];
   return (
-    <footer className="bg-white">
+    <footer className="bg-gray-900">
       <div className="mx-auto max-w-7xl overflow-hidden px-6 pt-12 pb-6 sm:pt-16 lg:px-8">
         <nav
           className="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12"
@@ -61,7 +61,7 @@ const Footer = () => {
             <div className="pb-6">
               <a
                 href={href}
-                className="text-sm leading-6 text-gray-600 hover:text-gray-900"
+                className="text-sm leading-6 text-gray-400 hover:text-gray-200 transition-all duration-300"
               >
                 {name}
               </a>
@@ -70,18 +70,18 @@ const Footer = () => {
         </nav>
         <div className="mt-10 flex justify-center space-x-10">
           {socials.map(({ name, href, icon }) => (
-            <Link href={href} className="text-gray-400 hover:text-gray-500" passHref target="_blank">
+            <Link href={href} className="text-gray-400 hover:text-gray-200 transition-all duration-300" passHref target="_blank">
               <span className="sr-only">{name}</span>
               {icon}
             </Link>
           ))}
         </div>
-        <p className="mt-10 text-center text-xs leading-5 text-gray-600">
+        <p className="mt-10 text-center text-xs leading-5 text-gray-200">
           &copy; {currentYear} Lagalm Industrial, todos los derechos reservados.
         </p>
-        <p className="mt-2 text-center text-xs leading-6 text-gray-400">
+        <p className="mt-2 text-center text-xs leading-6 text-gray-200">
           Desarrollado por{" "}
-          <Link className="text-gray-600" href="https://www.linkedin.com/in/martingac" passHref target="_blank">
+          <Link className="text-gray-400 hover:text-gray-200 transition-all duration-300" href="https://www.linkedin.com/in/martingac" passHref target="_blank">
             Martín
           </Link>
         </p>

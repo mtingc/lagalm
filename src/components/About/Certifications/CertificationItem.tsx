@@ -33,7 +33,7 @@ const CertificationItem = ({ title, description, image }: { title: string, descr
       <div className="mt-4 sm:ml-6 sm:mt-0 lg:ml-0 lg:mt-6">
         <animated.h3
           style={trail[0]}
-          className="text-sm font-medium text-blue-500"
+          className="text-sm font-medium text-cyan-600"
         >
           {title}
         </animated.h3>

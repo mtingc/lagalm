@@ -52,7 +52,7 @@ const Services = () => {
       <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
         <AnimatedList
           items={[
-            <h2 className="text-3xl font-bold tracking-tight text-blue-500 sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-cyan-600 sm:text-4xl">
               Nuestros servicios
             </h2>,
           ]}

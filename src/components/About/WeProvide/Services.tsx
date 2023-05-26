@@ -3,7 +3,7 @@ import ServiceItem from "./ServiceItem";
 const Services = () => {
   const svg = (
     <svg
-      className="absolute left-1 top-1 h-5 w-5 text-blue-500"
+      className="absolute left-1 top-1 h-5 w-5 text-cyan-600"
       viewBox="0 0 20 20"
       fill="currentColor"
       aria-hidden="true"
