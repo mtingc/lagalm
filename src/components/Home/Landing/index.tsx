@@ -1,10 +1,20 @@
 import Link from "next/link";
 
 import AnimatedList from "@/components/Animated/List";
+import Model from "@/components/Home/Model";
+
+import * as THREE from "three";
+import { Canvas } from "@react-three/fiber";
+import { DDSLoader } from "three-stdlib";
+
+THREE.DefaultLoadingManager.addHandler(/\.dds$/i, new DDSLoader());
 
 const Landing = () => {
   const items = [
-    <h1 key="expertos" className="max-w-lg text-3xl font-bold tracking-tight text-cyan-600 sm:text-5xl">
+    <h1
+      key="expertos"
+      className="max-w-lg text-3xl font-bold tracking-tight text-cyan-600 sm:text-5xl"
+    >
       Expertos en manufactura de productos plásticos y metálicos
     </h1>,
     <p key="somos" className="mt-6 text-lg leading-7 text-gray-600">
@@ -22,7 +32,7 @@ const Landing = () => {
       >
         Leer más <span aria-hidden="true">→</span>
       </Link>
-    </div>
+    </div>,
   ];
 
   return (
@@ -61,22 +71,13 @@ const Landing = () => {
           <AnimatedList items={items} />
         </div>
         <div className="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow">
-          <svg
-            viewBox="0 0 366 729"
-            role="img"
-            className="mx-auto w-[22.875rem] max-w-full drop-shadow-xl"
+          <Canvas
+            style={{ width: "100%", height: "100vh" }}
+            camera={{ position: [10, 5, 20] }}
           >
-            <title>App screenshot</title>
-            <defs>
-              <clipPath id="2ade4387-9c63-4fc4-b754-10e687a0d332">
-                <rect width="316" height="684" rx="36" />
-              </clipPath>
-            </defs>
-            <path
-              fill="#343E4E"
-              d="M16 59c0-23.748 19.252-43 43-43h246c23.748 0 43 19.252 43 43v615c0 23.196-18.804 42-42 42H58c-23.196 0-42-18.804-42-42V59Z"
-            />
-          </svg>
+            <pointLight position={[10, 10, 10]} />
+            <Model />
+          </Canvas>
         </div>
       </div>
     </div>
