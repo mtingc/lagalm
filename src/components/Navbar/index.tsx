@@ -1,16 +1,19 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, ReactElement } from "react";
 import Link from "next/link";
 import Logo from "@/components/Logo";
 
-const navLinks = [
-  { name: "Inicio", href: "/", active: true },
-  { name: "Nosotros", href: "/about", active: false },
-  { name: "Contacto", href: "/contact", active: false },
-];
+const Navbar = (): ReactElement => {
+  const navLinks = [
+    { name: "Inicio", href: "/" },
+    { name: "Nosotros", href: "/about" },
+    {
+      name: "Contacto",
+      href: "/contact",
+    },
+  ];
 
-const Navbar = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -71,13 +74,11 @@ const Navbar = () => {
           </button>
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
-          {navLinks.map(({ name, href, active }) => (
+          {navLinks.map(({ name, href }) => (
             <Link
               key={href}
               href={href}
-              className={`text-sm font-semibold tracking-widest transition-all duration-300 ${
-                active ? "text-gray-700 hover:text-gray-500" : "text-gray-500 hover:text-gray-700"
-              }`}
+              className={`text-sm font-semibold tracking-widest text-gray-700 hover:text-gray-500 transition-all duration-300`}
             >
               {name}
             </Link>
@@ -119,13 +120,11 @@ const Navbar = () => {
             <div className="mt-6 flow-root">
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="space-y-2 py-6">
-                  {navLinks.map(({ name, href, active }) => (
+                  {navLinks.map(({ name, href }) => (
                     <Link
                       key={href}
                       href={href}
-                      className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 ${
-                        active ? "" : ""
-                      }`}
+                      className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-700 hover:text-gray-500 transition-all duration-300`}
                       onClick={toggleMobileMenu}
                     >
                       {name}

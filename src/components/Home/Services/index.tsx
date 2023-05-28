@@ -2,11 +2,11 @@ import AnimatedList from "@/components/Animated/List";
 
 const Services = () => {
   const ourCommitmentItems = [
-    <p className="text-xl leading-8 text-gray-800">
+    <p key="nuestro" className="text-xl leading-8 text-gray-800">
       Nuestro compromiso con la excelencia y la satisfacción del cliente nos
       impulsa a mantenernos a la vanguardia de la industria manufacturera.
     </p>,
-    <div className="mt-10 max-w-xl text-base leading-7 text-gray-600">
+    <div key="contamos" className="mt-10 max-w-xl text-base leading-7 text-gray-600">
       <p>
         Contamos con un equipo de expertos altamente capacitados que trabajan en
         estrecha colaboración con nuestros clientes para entender sus
@@ -22,7 +22,7 @@ const Services = () => {
   ];
 
   const statsItems = [
-    <div className="flex flex-col-reverse gap-y-4 my-4">
+    <div key="produccion" className="flex flex-col-reverse gap-y-4 my-4">
       <dt className="text-base leading-7 text-gray-600">
         Producción de piezas al año
       </dt>
@@ -30,7 +30,7 @@ const Services = () => {
         40 millones
       </dd>
     </div>,
-    <div className="flex flex-col-reverse gap-y-4 my-4">
+    <div key="empleados" className="flex flex-col-reverse gap-y-4 my-4">
       <dt className="text-base leading-7 text-gray-600">
         Empleados altamente capacitados
       </dt>
@@ -38,7 +38,7 @@ const Services = () => {
         +400
       </dd>
     </div>,
-    <div className="flex flex-col-reverse gap-y-4 my-4">
+    <div key="clientes" className="flex flex-col-reverse gap-y-4 my-4">
       <dt className="text-base leading-7 text-gray-600">
         Clientes satisfechos
       </dt>
@@ -47,12 +47,13 @@ const Services = () => {
       </dd>
     </div>
   ];
+
   return (
     <div className="mx-auto mt-12 max-w-7xl px-6 lg:px-8">
       <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
         <AnimatedList
           items={[
-            <h2 className="text-3xl font-bold tracking-tight text-cyan-600 sm:text-4xl">
+            <h2 key="nuestros" className="text-3xl font-bold tracking-tight text-cyan-600 sm:text-4xl">
               Nuestros servicios
             </h2>,
           ]}

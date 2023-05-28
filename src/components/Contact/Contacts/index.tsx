@@ -76,8 +76,8 @@ const Contacts = () => {
       style={animation}
       className="mt-10 space-y-4 text-base leading-7 text-gray-600"
     >
-      {contacts.map(({ title, content, icon }) => (
-        <div className="flex gap-x-4">
+      {contacts.map(({ title, content, icon }, index) => (
+        <div key={index} className="flex gap-x-4">
           <dt className="flex-none">
             <span className="sr-only">{title}</span>
           </dt>

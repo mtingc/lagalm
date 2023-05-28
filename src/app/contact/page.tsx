@@ -14,10 +14,13 @@ const ContactPage = () => {
   };
 
   const items = [
-    <h2 className="text-4xl font-bold tracking-tight text-cyan-600">
+    <h2
+      key="Hablanos"
+      className="text-4xl font-bold tracking-tight text-cyan-600"
+    >
       Hablanos sobre tu proyecto
     </h2>,
-    <p className="mt-2 text-lg leading-8 text-gray-600">
+    <p key="Ayudamos" className="mt-2 text-lg leading-8 text-gray-600">
       Ayudamos a empresas y particulares a desarrollar sus ideas.
     </p>,
   ];
@@ -65,7 +68,7 @@ const ContactPage = () => {
               <Message />
             </div>
           )}
-          <Contacts/>
+          <Contacts />
         </div>
       </div>
     </div>

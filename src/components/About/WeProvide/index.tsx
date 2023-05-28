@@ -14,13 +14,13 @@ const WeProvide = () => {
   };
 
   const items = [
-    <h2 className="text-base font-semibold leading-7 text-cyan-600">
+    <h2 key="brindamos" className="text-base font-semibold leading-7 text-cyan-600">
       Brindamos soluciones integrales a nuestros clientes
     </h2>,
-    <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+    <p key="desde" className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
       Desde el diseño inicial de un producto hasta su entrega final al cliente
     </p>,
-    <p className="mt-6 text-md leading-8 text-gray-600">
+    <p key="años" className="mt-6 text-md leading-8 text-gray-600">
       A lo largo de los años, hemos adquirido experiencia colaborando
       estrechamente con nuestros clientes en el desarrollo de productos
       valiosos. Entendemos que convertir ideas en productos útiles y funcionales

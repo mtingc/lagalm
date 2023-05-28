@@ -4,10 +4,10 @@ import AnimatedList from "@/components/Animated/List";
 
 const Landing = () => {
   const items = [
-    <h1 className="max-w-lg text-3xl font-bold tracking-tight text-cyan-600 sm:text-5xl">
+    <h1 key="expertos" className="max-w-lg text-3xl font-bold tracking-tight text-cyan-600 sm:text-5xl">
       Expertos en manufactura de productos plásticos y metálicos
     </h1>,
-    <p className="mt-6 text-lg leading-7 text-gray-600">
+    <p key="somos" className="mt-6 text-lg leading-7 text-gray-600">
       Somos una empresa mexicana dedicada al diseño, desarrollo y manufactura de
       partes plásticas y metálicas de alta calidad. Con un enfoque principal en
       el sector automotriz, ofrecemos soluciones integrales para todo el proceso
@@ -15,7 +15,7 @@ const Landing = () => {
       moldes, inyección de piezas plásticas y la incorporación de procesos
       adicionales como recubrimientos y adiciones metálicas.
     </p>,
-    <div className="mt-10 flex items-center gap-x-6">
+    <div key="link" className="mt-10 flex items-center gap-x-6">
       <Link
         href="/about"
         className="text-sm font-semibold leading-6 text-cyan-600"

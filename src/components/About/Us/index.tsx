@@ -24,16 +24,19 @@ const Us = () => {
   });
 
   const items = [
-    <h2 className="text-3xl font-bold tracking-tight text-cyan-600 sm:text-4xl">
+    <h2
+      key="nosotros"
+      className="text-3xl font-bold tracking-tight text-cyan-600 sm:text-4xl"
+    >
       Nosotros
     </h2>,
-    <p className="mt-6 text-xl leading-8 text-slate-100">
+    <p key="estamos" className="mt-6 text-xl leading-8 text-slate-100">
       Estamos comprometidos a lograr la satisfacción de nuestros clientes,
       entregando productos de acuerdo a sus requisitos de ingeniería, los
       legales y reglamentarios aplicables, en la fecha requerida y con la
       calidad establecida.
     </p>,
-    <p className="mt-6 text-base leading-7 text-slate-100">
+    <p key="buscamos" className="mt-6 text-base leading-7 text-slate-100">
       Buscamos superar las expectativas de nuestros clientes a través de la
       mejora continua de nuestro sistema de gestión automotriz.
     </p>,

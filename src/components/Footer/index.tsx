@@ -51,14 +51,14 @@ const Footer = () => {
     },
   ];
   return (
-    <footer className="bg-gray-900">
+    <footer className="bg-gray-900 mt-20">
       <div className="mx-auto max-w-7xl overflow-hidden px-6 pt-12 pb-6 sm:pt-16 lg:px-8">
         <nav
           className="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12"
           aria-label="Footer"
         >
-          {links.map(({ name, href }) => (
-            <div className="pb-6">
+          {links.map(({ name, href }, index) => (
+            <div key={index} className="pb-6">
               <a
                 href={href}
                 className="text-sm leading-6 text-gray-400 hover:text-gray-200 transition-all duration-300"
@@ -69,8 +69,8 @@ const Footer = () => {
           ))}
         </nav>
         <div className="mt-10 flex justify-center space-x-10">
-          {socials.map(({ name, href, icon }) => (
-            <Link href={href} className="text-gray-400 hover:text-gray-200 transition-all duration-300" passHref target="_blank">
+          {socials.map(({ name, href, icon }, index) => (
+            <Link key={index} href={href} className="text-gray-400 hover:text-gray-200 transition-all duration-300" passHref target="_blank">
               <span className="sr-only">{name}</span>
               {icon}
             </Link>
