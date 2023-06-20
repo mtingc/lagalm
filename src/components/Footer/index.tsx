@@ -51,8 +51,8 @@ const Footer = () => {
     },
   ];
   return (
-    <footer className="bg-gray-900 mt-20">
-      <div className="mx-auto max-w-7xl overflow-hidden px-6 pt-12 pb-6 sm:pt-16 lg:px-8">
+    <footer className="bg-gray-900 mt-12">
+      <div className="mx-auto max-w-7xl overflow-hidden px-6 pt-12 pb-6 lg:px-8">
         <nav
           className="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12"
           aria-label="Footer"
@@ -77,13 +77,10 @@ const Footer = () => {
           ))}
         </div>
         <p className="mt-10 text-center text-xs leading-5 text-gray-200">
-          &copy; {currentYear} Lagalm Industrial, todos los derechos reservados.
+          &copy; {currentYear} Lagalm Industrial
         </p>
-        <p className="mt-2 text-center text-xs leading-6 text-gray-200">
-          Desarrollado por{" "}
-          <Link className="text-gray-400 hover:text-gray-200 transition-all duration-300" href="https://www.linkedin.com/in/martingac" passHref target="_blank">
-            Martín
-          </Link>
+        <p className="text-center text-xs leading-5 text-gray-200">
+          todos los derechos reservados.
         </p>
       </div>
     </footer>
